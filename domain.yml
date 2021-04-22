@@ -1,0 +1,50 @@
+version: "2.0"
+
+actions:
+  - validate_contact_form
+  - action_submit_contact_form
+  - action_bye
+  - utter_bye_confirmation
+  - utter_greet
+  - utter_init
+  - utter_help
+  - utter_ask_contact_form_name
+  - utter_ask_contact_form_email
+  - utter_ask_contact_form_message
+
+intents:
+  - greet
+  - get_started
+  - goodbye
+  - affirm
+  - deny
+  - appreciate
+  - ask_help
+  - bye_affirmation
+  - contact_me
+  - chitchat
+  - faq
+  
+slots: 
+  name:
+    type: text
+    influence_conversation: false 
+  email:
+    type: text
+    influence_conversation: false
+  message:
+    type: text
+    influence_conversation: false
+
+forms:
+  contact_form:
+    name:
+      - type: from_text
+    email:
+      - type: from_text
+    message:
+      - type: from_text
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

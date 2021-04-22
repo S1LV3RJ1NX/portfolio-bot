@@ -1,0 +1,73 @@
+version: "2.0"
+
+rules:
+
+- rule: Say `hello` when the user starts a conversation with intent `greet`
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say `hello` as init payload from bot end to user
+  steps:
+  - intent: get_started
+  - action: utter_init
+
+- rule: Ask for confirmation anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_bye_confirmation
+
+- rule: Say byee when user confirms
+  steps:
+  - intent: bye_affirmation
+  - action: action_bye
+
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- rule: respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+- rule: Activate contact form
+  steps: 
+  - intent: contact_me
+  - action: contact_form
+  - active_loop: contact_form
+
+- rule: Submit contact form
+  condition: 
+  - active_loop: contact_form
+  steps:
+  - action: contact_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_submit_contact_form
+
+- rule: Ask for help after form submit
+  steps:
+  - intent: ask_help
+  - action: utter_help
+
+- rule: contact form unhappy path 1
+  condition: 
+  - active_loop: contact_form
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+  - action: contact_form
+  - active_loop: contact_form
+
+- rule: contact form unhappy path 2
+  condition: 
+  - active_loop: contact_form
+  steps:
+  - intent: faq
+  - action: utter_faq
+  - action: contact_form
+  - active_loop: contact_form
+

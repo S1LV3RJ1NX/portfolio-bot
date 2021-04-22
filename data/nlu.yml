@@ -1,0 +1,239 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: chitchat/bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: appreciate
+  examples: |
+    - wonderful
+    - wow
+    - that's amazing
+    - just astounding
+    - awesome
+    - great
+    - cool
+    - marvelous
+    - extravagent
+
+- intent: faq/ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself?
+
+- intent: faq/ask_edu
+  examples: |
+    - Where did you study?
+    - What is your recent education?
+    - Which college are you from?
+    - What is your academic background?
+    - What is your college score?
+    - How much percent you got?
+    - What is your education domain?
+    - What is your major?
+    - Do you any minor subject?
+
+- intent: faq/ask_skills
+  examples: |
+    - what are your skills?
+    - please tell about your technical skills
+    - May I know your skills?
+    - what all things do you know?
+    - tell me about your expertise area?
+    - Can I know about your academic and non-academic skills?
+
+- intent: faq/ask_about_yourself
+  examples: |
+    - tell me about yourself
+    - Introduce yourself
+    - who are you?
+    - give me your introduction
+    - present yourself to me
+    - explain yourself
+
+- intent: faq/ask_hobbies
+  examples: |
+    - what are your hobbies?
+    - what are your fun activities?
+    - what do you do in free time?
+    - tell me about your leisure activities
+    - how to you spend your free time?
+    - what do you do in your off period?
+    - what things you love to do?
+    - can I know about your fun time activities?
+
+- intent: faq/ask_insta_page
+  examples: |
+    - ohh I see you have an instagram page what is it about?
+    - please tell me about your insta page?
+    - So what about your instagram page?
+    - I want to know more about your instagram
+    - Tell me what you do on instagram
+    - what is life.inscribed?
+    - where can I find life.inscribed?
+    - where is your insta page
+
+- intent: faq/ask_insta_motivation
+  examples: |
+    - what was the reason behind starting an instagram page?
+    - why life inscribed?
+    - what's meaning behind life.inscribed?
+    - cool, life.inscribed sounds a good name, what was motivation behind it
+    - I see there are not many followers, so what's the plan?
+    - what keeps you writing for the page?
+    - what is the thought behind those posts?
+    - if you had to describe life.inscribed how will you?
+
+- intent: faq/ask_flute_channel
+  examples: |
+    - tell me more about your flute channel
+    - ohh you play flute, that's wonderful can I listen to any one song?
+    - play a song for me
+    - sing for me
+    - I want to listen to your flute
+    - so you are a krishna, play something for me
+    - when did you start playing flute?
+
+- intent: faq/ask_relation
+  examples: |
+    - So are you in relationship?
+    - Who is your girlfriend?
+    - tell me about your gf?
+    - Are you in love?
+    - How's your love life?
+    - Do you love someone?
+
+- intent: faq/ask_strength
+  examples: |
+    - So what are your strengths?
+    - Tell me your strong points?
+    - Tell about your strengths?
+    - What are your good points?
+    - what are your good qualities?
+
+- intent: chitchat/ask_weather
+  examples: |
+    - So, how is the weather today?
+    - what weather today like?
+    - how's summer ?
+    - what about winter?
+    - Any rains?
+
+- intent: faq/ask_lowest_point
+  examples: |
+    - What was your lowest point till now?
+    - were you low in your life?
+    - What was low thing in your life?
+    - At what point in life where you most weak
+    - When where you completely depressed
+    - Are you always happy?
+    - what was your low ball point in life?
+
+- intent: faq/ask_project
+  examples: |
+    - U have done good amount of projects can you explain them?
+    - Explain about CBOT project
+    - Tell about your Btech project
+    - What is a parking assistant
+    - what is the story behind covid bot
+    - what is mitra?
+    - inform about netify
+    - Telegram bot sounds intresting. Can you explain a bit?
+    - Does mouse gesture use opencv?
+    - I want to know more about mouse gesture.
+
+- intent: faq/ask_languages
+  examples: |
+    - What all languages do you know?
+    - Do you know C?
+    - What about C++?
+    - What is your spoken language?
+    - What is your mother tongue?
+    - Do you know any of Python, java, scala, ruby, objective C, javascript, C#, etc?
+    - What all programming languages u know?
+
+- intent: faq/ask_achivements
+  examples: |
+    - What are your achievements?
+    - Tell me about your achivements
+    - Where did you contribute?
+    - Explain your contributions
+    - What did you achive untill now?
+    - Do you contribute?
+
+- intent: faq/ask_contact
+  examples: | 
+    - I want to connect with you.
+    - How can I contact you?
+    - Where can I get your email?
+    - I want your phone number
+    - Please give me your linkedIn
+    - Do you have github?
+    - Can we get together for a meeting?
+    - I want to schedule a meeting with you.
+
+- intent: faq/ask_favourite_post
+  examples: |
+    - Tell me a quote that motivates you.
+    - One of your favourite quote from your page?
+    - Tell me a writing that you remember
+    - Motivate me
+    - which post did you like the most on life.inscribed?
+    - tell me your favourite quote.
+    - which is your favourite post.
+    - favourite post

@@ -1,0 +1,1 @@
+cd app/ && rasa run && rasa run actions --cors "*" --debug -p $PORT 
