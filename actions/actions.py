@@ -145,3 +145,13 @@ class ActionBye(Action):
     async def run(self, dispatcher, tracker, domain):
         dispatcher.utter_message(response='utter_bye')
         return [AllSlotsReset()]
+
+class ActionContactFormSuccess(Action):
+
+    def name(self):
+        return 'action_contact_success'
+
+    async def run(self, dispatcher, tracker, domain):
+        name = tracker.get_slot('name')
+        dispatcher.utter_message(response='utter_contact_form_success',name=name)
+        return []

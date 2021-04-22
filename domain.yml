@@ -11,6 +11,7 @@ actions:
   - utter_ask_contact_form_name
   - utter_ask_contact_form_email
   - utter_ask_contact_form_message
+  - action_contact_success
 
 intents:
   - greet
