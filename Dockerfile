@@ -1,17 +1,15 @@
-FROM python:3.8.9-alpine
+FROM alpine:3.7
 
 WORKDIR /app
 
 # Install system libraries
-RUN apt-get update && \
-    apt-get install -y git && \
-    apt-get install -y gcc
+RUN apt-get update && apt-get install -y python3 python3-pip
 
 # Install project dependencies
 COPY ./requirements.txt .
 
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.txt
 
 COPY . .
 RUN chmod +x /app/core_server.sh
