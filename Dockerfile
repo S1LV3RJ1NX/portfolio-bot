@@ -12,8 +12,7 @@ COPY ./requirements.txt .
 
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip uninstall tensorflow
-RUN pip install tensorflow-cpu
+
 COPY . .
 RUN chmod +x /app/core_server.sh
 CMD /app/core_server.sh
