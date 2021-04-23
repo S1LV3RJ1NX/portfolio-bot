@@ -12,6 +12,7 @@ COPY ./requirements-actions.txt .
 
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
+RUN python3 -m spacy download en_core_web_md
 
 COPY . .
 RUN chmod +x /app/core_server.sh

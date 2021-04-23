@@ -1,5 +1,4 @@
-rasa==2.5.0
-spacy
+rasa[spacy]
 python-dotenv
 python-engineio==3.13.2
 python-socketio==4.6.1
