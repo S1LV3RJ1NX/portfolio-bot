@@ -1,7 +1,7 @@
 # This file contains the different endpoints your bot can use.
 
 nlg:
-  url: http://localhost:8000/nlg
+  url: http://localhost:8001/portfolio
   
 # Server where the models are pulled from.
 # https://rasa.com/docs/rasa/model-storage#fetching-models-from-a-server

@@ -1,17 +1,17 @@
 version: "2.0"
 
 actions:
+  - action_init
   - validate_contact_form
   - action_submit_contact_form
   - action_bye
   - utter_bye_confirmation
   - utter_greet
-  - utter_init
   - utter_help
   - utter_ask_contact_form_name
   - utter_ask_contact_form_email
   - utter_ask_contact_form_message
-  - action_contact_success
+  - action_inform_contact_form
 
 intents:
   - greet

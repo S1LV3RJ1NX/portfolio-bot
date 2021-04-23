@@ -10,7 +10,7 @@ rules:
 - rule: Say `hello` as init payload from bot end to user
   steps:
   - intent: get_started
-  - action: utter_init
+  - action: action_init
 
 - rule: Ask for confirmation anytime the user says goodbye
   steps:
@@ -35,6 +35,7 @@ rules:
 - rule: Activate contact form
   steps: 
   - intent: contact_me
+  - action: action_inform_contact_form
   - action: contact_form
   - active_loop: contact_form
 
@@ -46,7 +47,6 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: action_contact_success
   - action: action_submit_contact_form
 
 - rule: Ask for help after form submit
