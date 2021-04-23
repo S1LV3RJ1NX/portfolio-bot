@@ -3,10 +3,12 @@ ENTRYPOINT []
 RUN apt-get update && apt-get install -y python3 python3-pip && python3 -m pip install --no-cache --upgrade pip && pip3 install --no-cache rasa==2.5.0
 
 # Install project dependencies
-COPY ./requirements.txt .
+# COPY ./requirements.txt .
 
 RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir python-dotenv
+RUN pip install python-engineio==3.13.2
+RUN pip install python-socketio==4.6.1
 
 COPY . .
 RUN chmod +x /app/core_server.sh
