@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.8.9-alpine
 
 WORKDIR /app
 
@@ -12,7 +12,6 @@ COPY ./requirements-actions.txt .
 
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
-RUN python3 -m spacy download en_core_web_md
 
 COPY . .
 RUN chmod +x /app/core_server.sh
